@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/mtClassic"
+            android:layout_width="wrap_content"
+            android:icon="@mipmap/icons8"
+            android:title="Classic" />
+        <item
+            android:id="@+id/mtCustom"
+            android:icon="@mipmap/icons8"
+            android:title="Add a list" />
+        <item
+            android:id="@+id/mtViewList"
+            android:icon="@mipmap/icons8"
+            android:title="View Customs Lists" />
+        <item
+            android:id="@+id/mtManageList"
+            android:icon="@mipmap/icons8"
+            android:title="Manage List" />
+    </group>
+
+    <item android:title="Custom">
+        <menu>
+            <item
+                android:id="@+id/mtRunCustom"
+                android:icon="@mipmap/icons8"
+                android:title="Custom Mode" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>
