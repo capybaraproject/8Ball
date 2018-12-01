@@ -51,12 +51,12 @@ public class AnswersAddingActivity extends AppCompatActivity {
 
                 etAnswer.setText(lvAnswers.getItemAtPosition(position).toString());
             itemIndex=position;
-             ;}
+             }
         });
     }
 
 
-   
+
 
 //    @Override
 //    protected void onStart() {
