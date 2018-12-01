@@ -43,6 +43,7 @@ public class AnswersAddingActivity extends AppCompatActivity {
         etAnswer = findViewById(R.id.etAddAnswer);
         adapter =   new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,listAnswer);
         lvAnswers.setAdapter(adapter);
+        adapter.setNotifyOnChange(true);
         lvAnswers.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -55,7 +56,13 @@ public class AnswersAddingActivity extends AppCompatActivity {
     }
 
 
+   
 
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//
+//    }
 
     public void addAnswerToList(View view) {
 
@@ -72,9 +79,13 @@ public class AnswersAddingActivity extends AppCompatActivity {
 
 
     public void updateMessage(View view) {
-        if(!etAnswer.getText().toString().contentEquals("")){
-        
-      listAnswer.set(itemIndex,etAnswer.getText().toString());
-       }
+
+
+//      listAnswer.set(itemIndex,etAnswer.getText().toString());
+      adapter.insert(etAnswer.getText().toString(), itemIndex);
+      adapter.remove(adapter.getItem(itemIndex+1));
+      etAnswer.setText("");
+
+
     }
 }
